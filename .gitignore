@@ -1,0 +1,65 @@
+# --- Carpetas generadas por colcon ---
+build/
+install/
+log/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# --- C++ / compilación ---
+*.o
+*.a
+*.so
+*.out
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+
+# --- Editores / IDEs ---
+.vscode/
+.idea/
+*.swp
+*~
+
+# --- Sistema ---
+.DS_Store
+Thumbs.db
+
+# --- Datos pesados o locales (ajusta según tu caso) ---
+*.bag
+*.db3
+*.mcap
+rosbag2_*/
+maps/*.pgm
+*.log
+
+# --- Secretos / configuración local ---
+.env
+*.pem
+
+
+# carpetas extras
+# capytown_esan/
+laserscan_to_point_publisher/
+robot_localization/
+robot_pose_publisher_ros2/
+yahboom_app_save_map/
+yahboom_web_savmap_interfaces/
+yahboomcar_astra/
+yahboomcar_base_node/
+yahboomcar_bringup/
+yahboomcar_ctrl/
+yahboomcar_description/
+yahboomcar_laser/
+yahboomcar_mediapipe/
+yahboomcar_msgs/
+yahboomcar_multi/
+yahboomcar_nav/
+yahboomcar_visual/
