@@ -69,6 +69,15 @@ ros2 topic echo /true_yaw_deg      # hace de transportador
 <!-- NUEVOS COMANDOS -->
 <!-- NUEVOS COMANDOS -->
 <!-- NUEVOS COMANDOS -->
+   colcon build --packages-select capytown_esan --symlink-install
+<!-- NUEVOS COMANDOS -->
+<!-- NUEVOS COMANDOS -->
+<!-- NUEVOS COMANDOS -->
+<!-- NUEVOS COMANDOS -->
+<!-- NUEVOS COMANDOS -->
+<!-- NUEVOS COMANDOS -->
+
+
 
 ## RC-0 · Parte A (arranque)
 
