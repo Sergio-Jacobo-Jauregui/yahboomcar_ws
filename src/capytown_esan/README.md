@@ -34,6 +34,8 @@ source install/setup.bash
 
 ```bash
 export ROS_DOMAIN_ID=20
+# export ROS_DOMAIN_ID=<n>   # equipo n -> n; la placa debe tener el mismo valor
+
 ros2 launch capytown_esan bringup.launch.py          # publica /odom a ~11 Hz
 ros2 topic pub --once /odom_reset std_msgs/msg/Empty "{}"   # pose a cero
 ros2 run capytown_esan teleop_key
@@ -44,6 +46,7 @@ ros2 bag record /odom /odom_raw /cmd_vel /tf -o rc0_recta
 
 Topics del robot: `/cmd_vel` (Twist), `/odom_raw` (firmware, ~11 Hz), `/odom` (corregida),
 `/imu`, `/scan`, `/battery`. ROS_DOMAIN_ID fijo en 20.
+<!-- `/imu`, `/scan`, `/battery`. ROS_DOMAIN_ID: el del grupo (equipo n -> n), igual en Pi5 y placa. -->
 
 ## Calibración
 
@@ -59,3 +62,29 @@ ros2 launch capytown_esan sim.launch.py b_eff_true:=0.27
 ros2 run capytown_esan calibrate_beff --ros-args -p b_eff:=0.24
 ros2 topic echo /true_yaw_deg      # hace de transportador
 ```
+
+<!-- NUEVOS COMANDOS -->
+<!-- NUEVOS COMANDOS -->
+<!-- NUEVOS COMANDOS -->
+<!-- NUEVOS COMANDOS -->
+<!-- NUEVOS COMANDOS -->
+<!-- NUEVOS COMANDOS -->
+
+## RC-0 · Parte A (arranque)
+
+```bash
+# 1) en el contenedor, una vez: rosbag2 (Anexo A)
+bash scripts/install_rosbag2.sh
+# 2) dominio del grupo y bringup
+export ROS_DOMAIN_ID=<n>
+ros2 launch capytown_esan bringup.launch.py
+# 3) en otra terminal (mismo dominio): nodos, topics y hz -> setup_log.txt
+bash scripts/setup_check.sh
+```
+
+## Datos del grupo (completar)
+
+- Integrantes y rol (Integración / Control / Planificación / Percepción):
+- Sección y variantes (S-003: A1-A2 · S-004: A3-A4):
+- ROS_DOMAIN_ID:
+- r final: · b_eff final:
